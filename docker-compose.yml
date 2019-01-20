@@ -1,0 +1,11 @@
+version: "3"
+services:
+  ascii_chat:
+    image: "node:11"
+    working_dir: /home/app
+    volumes:
+      - ./:/home/app
+    ports:
+      - "8080:8080"
+    command: "npm run serve"
+
