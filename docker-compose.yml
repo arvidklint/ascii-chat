@@ -7,5 +7,5 @@ services:
       - ./:/home/app
     ports:
       - "8080:8080"
-    command: "npm run serve"
+    command: "npm run dev"
 
