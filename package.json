@@ -10,7 +10,7 @@
     "e2e": "ng e2e",
     "watch": "ng build --watch",
     "dev-server": "nodemon server/index.js",
-    "dev": "npm-run-all -p watch dev-server"
+    "dev": "concurrently \"npm:dev-server\" \"npm:watch\""
   },
   "private": true,
   "dependencies": {
@@ -40,6 +40,7 @@
     "@types/node": "~8.9.4",
     "@types/pixi.js": "^4.8.6",
     "codelyzer": "~4.5.0",
+    "concurrently": "~4.1.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~3.1.1",
@@ -48,7 +49,6 @@
     "karma-jasmine": "~1.1.2",
     "karma-jasmine-html-reporter": "^0.2.2",
     "nodemon": "^1.18.9",
-    "npm-run-all": "^4.1.5",
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
