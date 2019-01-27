@@ -1,0 +1,21 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "concurrently \"tsc --watch\" \"nodemon --delay 100ms dist/index.js\""
+  },
+  "keywords": [],
+  "author": "Arvid Sätterkvist",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.16.1",
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.9",
+    "typescript": "^3.2.4"
+  },
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}

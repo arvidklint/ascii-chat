@@ -1,15 +1,14 @@
-version: '2'
-services:
-  base:
-    image: node:11
+version: '3'
+services:    
+  client:
+    build: .
     volumes:
-      - .:/home/app/
-    working_dir: /home/app/
-  install:
-    extends:
-      service: base
-    command: npm i
-  build:
-    extends:
-      service: base
-    command: npm run build
+      - ./client:/home/app/client
+    working_dir: /home/app/client
+    command: npm install
+  server:
+    build: .
+    volumes:
+      - ./server:/home/app/server
+    working_dir: /home/app/server
+    command: npm install

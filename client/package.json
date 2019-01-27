@@ -3,14 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "dev": "ng serve --host 0.0.0.0",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "watch": "ng build --watch",
-    "dev-server": "nodemon server/index.js",
-    "dev": "concurrently \"npm:dev-server\" \"npm:watch\""
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {

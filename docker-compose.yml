@@ -1,11 +1,18 @@
 version: '3'
 services:
-  ascii_chat:
-    image: node:11
-    working_dir: /home/app
+  client:
+    build: .
+    working_dir: /home/app/client
     volumes:
-      - ./:/home/app
+      - ./client/:/home/app/client
     ports:
-      - 8080:8080
+      - 4200:4200
     command: npm run dev
-
+  server:
+    build: .
+    working_dir: /home/app/server
+    volumes:
+      - ./server/:/home/app/server
+    ports:
+      - 4201:4201
+    command: npm run dev
