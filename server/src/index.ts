@@ -1,11 +1,24 @@
-import Express from 'express';
+import IO from 'socket.io';
+import { Player } from './models/Player';
 
-const app = Express();
+const options: IO.ServerOptions = {
+    origins: '*:*'
+}
+
+const io = IO(options);
 
 const port = 4201;
+io.listen(port);
 
-app.get('/', (req, res) => res.send('Hello World!'));
+const players: Player[] = [];
 
-app.listen(4201), () => console.log(`Game server listening on port ${port}!`);
+io.on('connection', function (socket) {
+    const x = Math.floor(Math.random() * 10);
+    const y = Math.floor(Math.random() * 10);
+    const newPlayer = new Player(socket, x, y);
+    players.push(newPlayer);
+    console.log('a user connected', newPlayer.pos);
+    io.emit('new_player', newPlayer.pos);
+});
 
-export default app;
+export default io;

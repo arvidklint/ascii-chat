@@ -10,12 +10,13 @@
   "author": "Arvid Sätterkvist",
   "license": "ISC",
   "devDependencies": {
-    "@types/express": "^4.16.1",
+    "@types/node": "^10.12.18",
+    "@types/socket.io": "^2.1.2",
     "concurrently": "^4.1.0",
     "nodemon": "^1.18.9",
     "typescript": "^3.2.4"
   },
   "dependencies": {
-    "express": "^4.16.4"
+    "socket.io": "^2.2.0"
   }
 }
