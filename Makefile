@@ -1,4 +1,4 @@
-install: install-server install-client
+install: install-shared install-server install-client
 
 install-server:
 	docker-compose -f docker-compose.builder.yml run --rm server

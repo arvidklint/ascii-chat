@@ -5,6 +5,7 @@ services:
     working_dir: /home/app/client
     volumes:
       - ./client/:/home/app/client
+      - ./shared/:/home/app/shared
     ports:
       - 4200:4200
     command: npm run dev
@@ -13,6 +14,7 @@ services:
     working_dir: /home/app/server
     volumes:
       - ./server/:/home/app/server
+      - ./shared/:/home/app/shared
     ports:
       - 4201:4201
     command: npm run dev

@@ -1,10 +1,13 @@
 {
-  "name": "server",
+  "name": "ascii-chat-server",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "dev": "concurrently \"tsc --watch\" \"nodemon --delay 100ms dist/index.js\""
+    "dev": "concurrently \"npm:watch-*\"",
+    "watch-tsc": "tsc -w",
+    "watch-node": "nodemon --delay 100ms dist/index.js",
+    "clean": "rimraf dist/"
   },
   "keywords": [],
   "author": "Arvid Sätterkvist",
@@ -14,6 +17,7 @@
     "@types/socket.io": "^2.1.2",
     "concurrently": "^4.1.0",
     "nodemon": "^1.18.9",
+    "rimraf": "^2.6.3",
     "typescript": "^3.2.4"
   },
   "dependencies": {

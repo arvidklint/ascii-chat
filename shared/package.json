@@ -1,0 +1,19 @@
+{
+  "name": "asciishared",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "npm run clean && tsc -w",
+    "clean": "rimraf dist/"
+  },
+  "keywords": [],
+  "author": "Arvid Sätterkvist ",
+  "license": "ISC",
+  "devDependencies": {
+    "rimraf": "^2.6.3",
+    "tslib": "^1.9.3",
+    "typescript": "^3.3.1"
+  }
+}

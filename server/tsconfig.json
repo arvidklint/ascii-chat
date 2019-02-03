@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+        "baseUrl": "./",
         "module": "commonjs",
         "esModuleInterop": true,
         "diagnostics": true,
@@ -16,18 +17,20 @@
         "moduleResolution": "node",
         "sourceMap": true,
         "outDir": "dist",
-        "baseUrl": ".",
         "typeRoots": [
             "node_modules/@types"
         ],
         "paths": {
             "*": [
                 "node_modules/*",
-                "types/*"
+                "types/*",
             ]
         }
     },
     "include": [
         "src/**/*"
+    ],
+    "references": [
+        { "path": "../shared" }
     ]
 }

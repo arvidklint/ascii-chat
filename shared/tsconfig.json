@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./",
+        "outDir": "dist",
+        "declaration": true,
+        "sourceMap": true,
+        "module": "commonjs",
+        "target": "es5",
+        "lib": [ "es2015", "dom" ],
+        "importHelpers": true,
+        "allowJs": false,
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "strict": true,
+        "composite": true,
+    },
+    "include": [
+        "src/**/*.ts"
+    ]
+}
